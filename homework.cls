@@ -50,8 +50,8 @@
 \geometry{
   top=.5in,
   bottom=.75in,
-  right=1.5in,
-  left=1.5in,
+  right=1in,
+  left=1in,
   headheight=3em,
   headsep=1em,
   marginparwidth=1.125in,
@@ -60,28 +60,30 @@
 }
 
 %% document metadata
-\newcommand{\thecourse}{Math 132 -- Fall 2018}
+\newcommand{\thecourse}{Math 132}
+\newcommand{\theterm}{Spring 2019}
 \newcommand{\thecoauthor}{}
 \newcommand{\coauthor}[1]{\renewcommand{\thecoauthor}{#1}}
+\newcommand{\homework}[1]{\newcommand{\thehomework}{#1}}
 
 %% page decoration
 \fancypagestyle{first}{
   \fancyhf{}
   \chead{
-    \textbf{\thetitle} \\
-    {\small\textsc{\thecourse}} \\
+    \textbf{Homework \thehomework}\\
+    {\small\textsc{\thecourse{} -- \theterm}}\\
     {\small\textsc{due at the beginning of class on \underline{\thedate}}}
   }
-  \rhead{{\small\theauthor} \\ \mbox{\scriptsize\thecoauthor} \\}
-  \lhead{\small\textsc{\thepage\ of \pageref{LastPage}} \\ \ \\}
+  \rhead{\mbox{\small\theauthor}\\\mbox{\small\thecoauthor}\\}
+  \lhead{{\small\textsc{\thepage\ of \pageref{LastPage}}}\\\mbox{}\\}
   \renewcommand{\headrulewidth}{0pt}
 }
 
 \fancypagestyle{rest}{
   \fancyhf{}
-  \chead{\small \textsc{\thecourse}}
-  \rhead{\small \theauthor}
-  \lhead{\small \textsc{\thepage\ of \pageref{LastPage}}}
+  \chead{\small\textsc{\thecourse{} -- \theterm}}
+  \rhead{\small\theauthor}
+  \lhead{\small\textsc{\thepage{} of \pageref{LastPage}}}
   \renewcommand{\headrulewidth}{0pt}
 }
 
@@ -105,11 +107,12 @@
 ]{exercise}
 
 \declaretheorem[style=exercise]{exercise}
+\declaretheorem[style=exercise]{Exercise}
 
 \declaretheoremstyle[
   bodyfont=\normalfont,
   numbered=no,
-  spaceabove=1em,
+  spaceabove=.75em,
   preheadhook=\vspace*{1em},
 ]{solution}
 
@@ -136,14 +139,14 @@
 \newcommand{\mat}{\mathbf}
 
 %% common blackboard-bold symbols
-\newcommand{\ZZ}{\mathbb Z}
-\newcommand{\RR}{\mathbb R}
-\newcommand{\QQ}{\mathbb Q}
-\newcommand{\CC}{\mathbb C}
-\newcommand{\KK}{\mathbb K}
-\newcommand{\NN}{\mathbb N}
-\newcommand{\PP}{\mathbb P}
-\newcommand{\VV}{\mathbb V}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\C}{\mathbb C}
+\newcommand{\K}{\mathbb K}
+\newcommand{\N}{\mathbb N}
+\newcommand{\W}{\mathbb W}
+\newcommand{\V}{\mathbb V}
 
 % transpose and complement
 \newcommand{\T}{\mathsf{T}}
