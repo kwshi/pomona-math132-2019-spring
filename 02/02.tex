@@ -1,0 +1,151 @@
+\documentclass{homework}
+
+\homework{2}
+\date{Thursday 2/7}
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+	This exercise asserts that all norms on a finite-dimensional vector
+  space give rise to the same topology.  That is, they produce the
+  same open sets, the same closed sets, the same convergent sequences,
+  etc.
+	\begin{enumerate}
+  \item Prove that if $v_1,v_2,\ldots, v_n$ are vectors in a normed
+    vector space $\V$, then the function $f: \R^n \rightarrow \R$
+    defined by
+    \begin{equation*}
+      f(a_1,a_2, \ldots, a_n) = \norm{ a_1 v_1 + a_2 v_2 + \cdots + a_n v_n}
+    \end{equation*}
+    is uniformly continuous.\footnote{Hint: Let
+      $\vec{a} = (a_1,a_2,\ldots,a_n)$ and
+      $\vec{b} =(b_1,b_2,\ldots,b_n)$, and denote
+      $f(a_1,a_2, \ldots, a_n)$ by $f(\vec{a})$ and similarly for
+      $f(\vec{b})$.  Show that
+      $|f(\vec{a} ) - f(\vec{b})| \leq \sqrt{n}M \norm{ \vec{a} -
+        \vec{b} }_{\R^n}$ for some constant $M$ that is independent
+      of $\vec{a}$ and $\vec{b}$.}  \footnote{Hint: First explain
+      why it suffices to prove that
+      $\norm{b_1 v_1 + \cdots + b_n v_n } \geq c$ whenever
+      $|b_1| + |b_2|+ \cdots + |b_n| = 1$.  Next, consider the
+      values of $f$ on the set
+      $S = \{ (b_1,b_2,\ldots,b_n) \in \R^n: |b_1| + \cdots + |b_n|
+      = 1 \}$.  What type of set is $S$?  Does this lead you to $c$?
+      Why is $c > 0$?}
+
+    \begin{solution}
+    \end{solution}
+
+  \item Prove that if $v_1,v_2,\ldots, v_n$ are linearly independent
+    vectors in a normed space $\V$, then there exists a constant
+    $c > 0$ such that
+    \begin{equation*}
+      \norm{a_1 v_1 + \cdots + a_n v_n } \geq c\big( |a_1| + \cdots + |a_n| \big)
+    \end{equation*}
+    for all $a_1,a_2,\ldots, a_n \in \R$.
+
+    \begin{solution}
+    \end{solution}
+
+  \item Prove that if $\V$ is a \underline{finite} dimensional
+    vector space, then all norms on $\V$ are equivalent.  In other
+    words, prove that if $\norm{\,\cdot\,}_1$ and
+    $\norm{\,\cdot\,}_2$ are any two norms on $\V$, then there exist
+    constants $C_1,C_2>0$ such that
+    \begin{equation*}
+      C_1 \norm{x}_1 \leq \norm{x}_2 \leq C_2 \norm{x}_1
+    \end{equation*}
+    for all $x \in \V$.  This implies that the associated metrics
+    $d_1(x,y) = \norm{x-y}_1$ and $d_2(x,y) = \norm{x-y}_2$ induce
+    the same open sets, closed sets, and convergent sequences.  In
+    other words, \emph{topologically} $(\V,d_1)$ and $(\V,d_2)$ are
+    essentially identical.\footnote{Hint: Let $v_1,v_2,\ldots, v_n$
+      be a basis for $\V$.  It suffices to show that an arbitrary
+      norm $\norm{\cdot}$ on $\V$ is equivalent to the so-called
+      \emph{$\ell^1$-norm}
+      $\norm{ b_1 v_1 + \cdots + b_n v_n}_1 = |b_1| + \cdots +
+      |b_n|$.  Make sure to use (ii) to cut your work in half!}
+
+    \begin{solution}
+    \end{solution}
+
+  \item Prove that if $\V$ is a normed vector space and $\W$ is a
+    finite dimensional subspace of $\V$, then $\W$ is a
+    closed\footnote{Here ``closed'' means \emph{topologically
+        closed} (i.e., closed with respect to the metric that $\W$
+      inherits from $\V$), rather than ``closed under addition and
+      scalar multiplication.''}  subset of $\V$.\footnote{Hint: Fix
+      a basis $v_1,v_2,\ldots,v_n$ of $\W$ and let
+      $w_j = \sum_{i=1}^n a_i(j) v_i$ be a Cauchy sequence in $\W$
+      (i.e., for each $i = 1,2,\ldots, n$, $a_i(j)$ is a numerical
+      sequence indexed on $j$).  Using (iii), prove that each of the
+      $n$ coefficient sequences $a_1(j), a_2(j), \ldots, a_n(j)$ is
+      Cauchy in $\R$.  Letting $a_1,a_2,\ldots,a_n$ denote their
+      respective limits, show that $w_j$ converges to the vector
+      $w= a_1 v_1 + a_2 v_2 + \cdots + a_n v_n$.}
+
+    \begin{solution}
+    \end{solution}
+
+	\end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+	Recall from lecture that there exists a function $f:\R\to\R$ such that
+	$DC(f) = \Q$.  In this problem, we address the question of
+	whether $DC(f) = \R \backslash \Q$ (the set of irrational numbers) is possible.
+	\begin{enumerate}
+  \item Prove that a dense $G_{\delta}$ (countable intersection of
+    open sets) subset of $\R$ must be uncountable.\footnote{Hint: Let
+      $S_n$ be a sequence of open sets in $\R$ such that
+      $S = \bigcap_{n=1}^{\infty} S_n$ is dense in $\R$.  Explain why
+      each $S_n$ is itself dense in $\R$.  Next, assume toward a
+      contradiction that $S = \{ a_1,a_2,\ldots\}$ (the argument in
+      the case where $S$ is finite is similar).  Examine the sets
+      $G_n = S_n \backslash \{a_n\}$ and use the Baire Category
+      Theorem somehow.}
+
+    \begin{solution}
+    \end{solution}
+
+  \item Does there exist a function $f:\R\to\R$ such that $DC(f) = \R \backslash \Q$?
+    In other words, does there exist a function $f:\R\to\R$
+    which is discontinuous precisely on the set of irrational numbers?\footnote{Hint:  Use (i)
+			and the fact that $DC(f)$ must be an $F_{\sigma}$ set.}
+
+    \begin{solution}
+    \end{solution}
+
+	\end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+	If $S \subseteq \R$, then the \emph{characteristic function of $S$}
+  is the function $\chi_S:\R\to\R$ defined by
+	\begin{equation*}
+		\chi_S(x)
+		=
+		\begin{cases}
+			0 & \text{if $x \notin S$},\\
+			1 & \text{if $x \in S$}.
+		\end{cases}
+	\end{equation*}
+	Prove that there does not exist a sequence of continuous functions
+  $f_n:\R\to\R$ such that $\chi_{\Q}(x) = \lim_{n\to\infty} f_n(x)$
+  for all $x \in \R$.  In other words, prove that the characteristic
+  function of the set of rational numbers is not the pointwise limit
+  of continuous functions.\footnote{Hint: Suppose toward a
+    contradiction that there exists a sequence of continuous functions
+    $f_n:\R\to\R$ such that $\chi_{\Q}(x) = \lim_{n\to\infty} f_n(x)$
+    for all $x$.  Use the fact that each of the sets
+    $f^{-1}_n( \tfrac{1}{2}, \infty) = \{ x \in \R : f_n(x) >
+    \tfrac{1}{2} \}$ is open, by the topological (i.e., inverse image)
+    characterization of continuity.  Next, show that the set
+    $S_n = \bigcup_{i=n}^{\infty} f^{-1}_i(\tfrac{1}{2}, \infty)$ is
+    open.  What is the relationship between $\Q$ and the $S_n$? }
+
+  \begin{solution}
+  \end{solution}
+\end{Exercise}
+\end{document}

@@ -1,0 +1,141 @@
+\documentclass{homework}
+
+\homework{1}
+\date{Thursday 1/31}
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+	This exercise guides you through the construction of a continuous
+	function on $\R$ that is nowhere differentiable.
+	\begin{enumerate}
+  \item Prove that if $f:\R\to\R$ is differentiable at $x$, then
+    \begin{equation*}
+      \lim_{n\to\infty} \frac{ f(v_n) - f(u_n) }{v_n - u_n} = f'(x)
+    \end{equation*}
+    whenever $u_n,v_n$ are sequences such that the following
+    hold\footnote{Hint: You will need to use the definition of the
+      derivative as a limit of difference quotients.  Without loss of
+      generality, you can also assume that $f'(x) = 0$ (why?).}
+    \smallskip
+    \begin{enumerate}
+    \item $u_n \leq x < v_n$ for all $n \in \N$,
+    \item $u_n <v_n$ for all $n \in \N$,
+    \item $\lim_{n\to\infty} (v_n - u_n) = 0$.
+    \end{enumerate}
+
+    \begin{solution}
+    \end{solution}
+
+  \item Given $x \in \R$, let $g(x)$ denote the distance from $x$ to
+    the nearest integer.  Prove that the function $f:\R\to\R$ defined
+    by
+    \begin{equation*}
+      f(x) = \sum_{n=0}^{\infty} \frac{g(2^nx)}{2^n}
+    \end{equation*}
+    is well-defined, continuous, and bounded.\footnote{Hint: Use the
+      \emph{Weierstrass $M$-Test} to show that the series converges
+      uniformly on $\R$, then recall that the uniform limit of
+      continuous functions is continuous.}
+
+    \begin{solution}
+    \end{solution}
+
+  \item Prove that the function $f$ from (ii) is not differentiable at
+    any $x \in \R$.\footnote{Hint: First observe that if $x$ is a
+      dyadic rational number (i.e., $x = \tfrac{m}{2^n}$ for some
+      $m \in \Z$ and $n \in \N$), then $2^k x \in \Z$ whenever
+      $k \geq n$ and thus $g(2^kx) = 0$ for all $k \geq n$.  Now fix
+      $x \in \R$ and for each $n\in \N$ let $u_n = \frac{m_n}{2^n}$
+      and $v_n = \frac{m_n+1}{2^n}$ be dyadic rational numbers which
+      satisfy $u_n \leq x < v_n$ and $v_n - u_n = \frac{1}{2^n}$.  Now
+      consider the expression $\frac{ f(v_n) - f(u_n) }{v_n -u_n}$ and
+      use (i).}
+
+    \begin{solution}
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+	A function $f:[a,b] \to \R$ is called \emph{piecewise linear} if the
+  graph of $f$ consists of finitely many line segments.  Let
+  $CPL[a,b]$ denote the set of all continuous piecewise linear
+  functions on $[a,b]$.  In particular, note that $CPL[a,b]$ is a
+  subspace of the vector space $C[a,b]$.\footnote{Recall from Math 131
+    that $C[a,b]$ denotes the set of all continuous functions
+    $f:[a,b]\to\R$.  Since $C[a,b]$ is closed under addition and
+    scalar multiplication, it is a vector space.  In fact, $C[a,b]$ is
+    a \emph{Banach space} with respect to the \emph{norm}
+    $\norm{f}_{\infty} = \sup_{x\in[a,b]} |f(x)|$.  What does this
+    mean?  First of all, the expression $\norm{f}_{\infty}$ is finite
+    for each $f$ in $C[a,b]$.  Why?  Because $[a,b]$ is compact and
+    $f:[a,b]\to\R$ is continuous it follows that $f$ is bounded
+    (\emph{Extreme Value Theorem}).  The norm $\norm{f}_{\infty}$
+    defines a \emph{metric} $d_{\infty}(f,g) = \norm{f-g}_{\infty}$ on
+    $C[a,b]$.  Observe that convergence with respect to the metric
+    $d_{\infty}$ is equivalent to \emph{uniform convergence} on
+    $[a,b]$.  It is proven in many Math 131 courses that $C[a,b]$ is a
+    \emph{complete} metric space with respect to the metric
+    $d_{\infty}$.  However, $C[a,b]$ is even better -- it is a
+    \emph{Banach space} (a vector space, endowed with a norm, which is
+    complete with respect to the metric induced by the norm).}
+	\begin{enumerate}
+  \item If $(x,y)$ is a ``corner'' or ``endpoint'' of the graph of
+    $f \in CPL[a,b]$, then $x$ is said to be a \emph{node} of $f$.
+    Let $a = x_1 < x_2 < \cdots < x_n = b$ be distinct points in
+    $[a,b]$ and let $S$ denote the set of all functions in $CPL[a,b]$
+    with nodes precisely at the $x_i$.  It turns out that $S$ is an
+    $n$-dimensional subspace of $C[a,b]$ and that the constant
+    function $\phi_0(x) = 1$ along with the $n-1$ functions
+    \begin{equation*}
+      \phi_i(x) = | x - x_i| + (x - x_i)
+    \end{equation*}
+    for $i = 1,2,\ldots, n-1$ form a basis for $S$.  Briefly
+    explain\footnote{i.e., this does not require rigorous proof.  Just
+      demonstrate that you understand the principle.}  why this is
+    true.\footnote{Hint: Consider the graphs of the $\phi_i$.  How
+      does their shape help determine the coefficients in the
+      expression $f = c_0 \phi_0 + \cdots + c_{n-1} \phi_{n-1}$ for
+      $f \in CPL[a,b]$?}
+
+    \begin{solution}
+    \end{solution}
+
+  \item Prove that any function in $CPL[a,b]$ can be written in the
+    form\footnote{This representation will be important later on when
+      we discuss the Weierstrass Approximation Theorem.}
+    \begin{equation*}
+      \left( \sum_{i=1}^m \alpha_i | x - x_i| \right) + \beta x +
+      \gamma
+    \end{equation*}
+    for constants $\alpha_i,\beta,\gamma$ and some natural number $m$.
+
+    \begin{solution}
+    \end{solution}
+
+  \item Prove that $CPL[a,b]$ is dense in $C[a,b]$.\footnote{Hint:
+      Since $[a,b]$ is compact, it follows that $f$ is uniformly
+      continuous and hence there exists $\delta > 0$ such that
+      $|x - y| < \delta$ implies $|f(x) - f(y)| < \tfrac{\epsilon}{2}$
+      for all $x,y \in [a,b]$.  Choose a natural number
+      $n > \frac{b-a}{\delta}$ and partition $[a,b]$ into $n$ equal
+      subintervals $I_j = [x_{i-1},x_i]$ (i.e.,
+      $x_i = \frac{(b-a)i}{\delta}$ for $i=0,1,2,\ldots,n$).  Use this
+      to construct a piecewise linear function $\phi$ such that
+      $\norm{f - \phi}_{\infty} < \epsilon$}
+
+    \begin{solution}
+    \end{solution}
+
+  \item A metric space $(M,d)$ is \emph{separable} if there exists a
+    countable subset of $M$ which is dense in $M$.  Briefly explain
+    why $C[a,b]$ is separable.
+
+    \begin{solution}
+    \end{solution}
+
+	\end{enumerate}
+\end{Exercise}
+\end{document}
