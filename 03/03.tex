@@ -1,0 +1,187 @@
+\documentclass{homework}
+
+\homework{3}
+\date{Thursday 2/14}
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+	This exercise continues our exploration of normed vector spaces.
+  This material will be important later on.
+	\begin{enumerate}
+  \item Prove that if $\W$ is a subspace (in the linear algebra sense)
+    of a normed vector space $\V$, then so is its closure
+    $\W^- $.\footnote{Hint: Since $\W^- $ is a nonempty (it contains
+      the zero vector), it suffices to prove that $\W^- $ is closed
+      under addition and scalar multiplication.  }
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item If $\W$ is a proper, closed (in the topological sense)
+    subspace (in the linear algebra sense) of a normed vector space
+    $\V$, show that $\W$ is nowhere dense in $\V$.\footnote{Hint:
+      Suppose toward a contradiction that $\W$ is not nowhere dense in
+      $\V$.  In other words, suppose that $\W^- = \W$ has nonempty
+      interior (i.e., it contains a nonempty open set).  Use this to
+      deduce that $\W = \V$, a contradiction.} \footnote{Remark: The
+      hypothesis that $\W$ is topologically \emph{closed} is extremely
+      important.  For instance, the Weierstrass Approximation Theorem
+      asserts that the subspace $\mathcal{P}$ of all polynomials is
+      dense in $C[0,1]$ with respect to the $d_{\infty}$ metric (i.e.,
+      the ``sup metric'').  This illustrates a fundamental distinction
+      between finite-dimensional vector space theory (i.e., linear
+      algebra) and the infinite-dimensional theory (i.e., functional
+      analysis).  For instance, it is clearly impossible for a proper
+      subspace of $\R^3$ to be dense in $\R^3$!}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Let $\V$ be an infinite-dimensional normed vector space and
+    suppose that $\V = \bigcup_{n=1}^{\infty} \V_n$, in which each
+    $\V_n$ is a finite-dimensional subspace of $\V$.  Prove that $\V$
+    is not complete.
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Is it possible to define a norm on the vector space
+    $\mathcal{P}$ of all polynomials such that $\mathcal{P}$ is a
+    complete metric space with respect to the induced metric
+    $d(p,q) = \norm{p-q}$?
+
+    \begin{solution}
+
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+	Use the Weierstrass Approximation Theorem to help you prove that
+  $C[0,1]$ is separable (i.e., has a countable dense subset).
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	Let $(X,d)$ be a compact metric space and let $f_n: X \to \R$ be a
+  sequence of continuous functions.  Suppose that
+  $f_n(x) \leq f_{n+1}(x)$ holds for all $x \in X$ and $n \in \N$.
+  Prove that if $f_n$ converges pointwise to a continuous function
+  $f: X \to \R$, then $f_n$ actually converges uniformly to
+  $f$.\footnote{Hint: Let $g_n = f - f_n$ and note that
+    $\lim_{n\to\infty} g(x) = 0$ for all $x \in X$.  Let
+    $\epsilon > 0$ be given and let
+    $S_n = g_n^{-1}(-\infty,\epsilon)$.  Now observe that
+    $X = \bigcup_{n=0}^{\infty} S_n$.}%
+	This result is known as \emph{Dini's Theorem}.
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	The \emph{Baire-Osgood Theorem} asserts that if $f_n:\R\to\R$ is a
+  sequence of continuous functions that converges pointwise to a
+  function $f:\R\to\R$, then $DC(f)$ is a set of first category in
+  $\R$ (i.e., $DC(f)$ is the countable union of nowhere dense sets).
+  In particular, this implies that $f$ is continuous on a dense subset
+  of $\R$.  From lecture, we know that $DC(f)$ can be represented as
+  the countable union of closed sets:
+	\begin{equation*}
+		DC(f) = \bigcup_{n=1}^{\infty}
+    \{x\in \R: \omega_f(x) \geq \tfrac{1}{n} \}
+	\end{equation*}
+	Therefore to prove the Baire-Osgood Theorem, it suffices to prove
+  that for every $\epsilon > 0$, the closed set
+	\begin{equation*}
+		S = \{x \in \R : \omega_f(x) \geq \epsilon\}
+	\end{equation*}
+	is nowhere dense in $\R$.
+	\begin{enumerate}
+  \item  Consider the sets
+    \begin{equation*}
+      E_n = \bigcap_{i,j \geq n}\{ x \in \R :
+      |f_i(x) - f_j(x)| \leq \tfrac{\epsilon}{5} \}.
+    \end{equation*}
+    Prove that each $E_n$ is closed and that
+    $\bigcup_{n=1}^{\infty} E_n =\R$.\footnote{Hint: Consider the
+      functions $g_{ij}(x) = f_i(x) - f_j(x)$ and use the inverse
+      image characterization of continuity.}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Suppose that $I = [a,b]$ (where $a<b$) is a closed interval.
+    Prove that there exists $n \in \N$ such that $E_n \cap I$
+    contains a nonempty open interval $J$.\footnote{Hint: Use the
+      fact that $\bigcup_{n=1}^{\infty} E_n =\R$.  You will need the
+      Baire Category Theorem for this problem.}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Prove that\footnote{Hint: This requires (ii) and several
+      applications of the Triangle Inequality.  Start with the
+      observation that since $J \subseteq E_n$ by (ii), we have
+      $|f_i(x) - f_j(x)| \leq \tfrac{\epsilon}{5}$ for all $x \in J$
+      and all $i,j \geq n$.  Eventually, you want to show that for
+      each $x_0 \in J$, there exists an interval $I_0 \ni x_0$ such
+      that
+      $\omega_f(x_0) \leq \omega(f, I_0) \leq \tfrac{4\epsilon}{5} <
+      \epsilon$. }
+    \begin{equation*}
+      J \subseteq S^c = \{x \in \R : \omega_f(x) < \epsilon\}.
+    \end{equation*}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Conclude the proof of the Baire-Osgood Theorem by showing
+    that $S$ is nowhere dense in $\R$.
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Use the Baire-Osgood Theorem to prove that if $f:\R\to\R$ is
+    differentiable, then $DC(f')$ is a set of first
+    category.\footnote{Hint: Express $f'(x)$ as a limit of
+      continuous functions.}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Use the Baire-Osgood Theorem to prove that $\chi_{\Q}$ is not
+    the pointwise limit of a sequence of continuous functions.
+
+    \begin{solution}
+
+    \end{solution}
+  \end{enumerate}
+	It is interesting to note that $\chi_{\Q} = \lim_{k \to \infty} f_k$
+  where
+	$$f_k(x) = \lim_{n\to\infty} ( \cos (k!x \pi ) )^{2n}$$ for $k \in \N$.  Thus, $\chi_{\Q}$ is the pointwise limit
+	of a sequence of functions, each of which is the pointwise limit of
+  continuous functions.  One says that $\chi_{\Q}$ is not of
+  \emph{Baire class} 1, but it is of Baire class 2.\footnote{i.e., it
+    takes two consecutive pointwise limiting procedures to obtain
+    $\chi_{\Q}$ from continuous functions.}  Continuing with this
+  terminology in the obvious way, Lebesgue (1905) proved that distinct
+  Baire classes exist for each $n\in \N$.  In fact, more is true --
+  however this would require a digression into transfinite arithmetic
+  and the theory of ordinal numbers.
+\end{Exercise}
+\end{document}

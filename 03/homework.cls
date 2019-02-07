@@ -1,0 +1,1 @@
+/home/kshi/documents/coursework/2-sophomore/spring/pomona-math132/homework.cls
