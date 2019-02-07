@@ -38,6 +38,7 @@
   multicol,
   color,
   tikz,
+  pgfplots,
   hyperref,
   marginnote,
   isomath,
