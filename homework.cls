@@ -133,8 +133,11 @@
 \declaretheorem[style=theorem]{claim}
 \declaretheorem[style=theorem]{lemma}
 \declaretheorem[style=theorem]{corollary}
-\declaretheorem[style=theorem, title=Base case]{basecase}
-\declaretheorem[style=theorem, title=Inductive step]{inductivestep}
+\declaretheorem[style=ntheorem, title=Claim]{nclaim}
+\declaretheorem[style=ntheorem, title=Lemma]{nlemma}
+\declaretheorem[style=ntheorem, title=Corollary]{ncorollary}
+\declaretheorem[style=minitheorem, title=Base case]{basecase}
+\declaretheorem[style=minitheorem, title=Inductive step]{inductivestep}
 
 \newenvironment{preface}{\itshape}{\par\hrulefill}
 \newcommand{\comment}[1]{\marginnote{\scriptsize\textcolor{gray}{#1}}}
