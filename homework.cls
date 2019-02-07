@@ -19,8 +19,6 @@
 \RequirePackage{dsfont}
 \RequirePackage{parskip}
 
-\renewcommand{\mathbb}{\mathds}
-
 %% math
 \RequirePackage{
   amsmath,
@@ -142,6 +140,14 @@
 \newcommand{\comment}[1]{\marginnote{\scriptsize\textcolor{gray}{#1}}}
 
 % math commands
+
+%% use cooler mathds black-board math font
+\renewcommand{\mathbb}{\mathds}
+
+%% miscellaneous operators
+\newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
+
+%% vector bold-italic
 \renewcommand{\vec}{\mathbfit}
 \newcommand{\mat}{\mathbf}
 
