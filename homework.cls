@@ -16,7 +16,10 @@
 
 %% fonts and text styles
 \RequirePackage{lmodern}
+\RequirePackage{dsfont}
 \RequirePackage{parskip}
+
+\renewcommand{\mathbb}{\mathds}
 
 %% math
 \RequirePackage{
