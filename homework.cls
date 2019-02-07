@@ -168,8 +168,9 @@
 \newcommand{\C}{\mathbb C}
 \newcommand{\K}{\mathbb K}
 \newcommand{\N}{\mathbb N}
-\newcommand{\W}{\mathbb W}
-\newcommand{\V}{\mathbb V}
+
+\newcommand{\W}{\mathcal W}
+\newcommand{\V}{\mathcal V}
 
 % transpose and complement
 \newcommand{\T}{\mathsf{T}}
