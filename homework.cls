@@ -114,13 +114,16 @@
 \declaretheorem[style=exercise]{Exercise}
 
 \declaretheoremstyle[
-  bodyfont=\normalfont,
+  spaceabove=1em,
   numbered=no,
-  spaceabove=.75em,
-  preheadhook=\vspace*{1em},
-]{solution}
+  bodyfont=\normalfont,
+  headfont=\bfseries,
+]{theorem}
 
-\declaretheorem[style=solution, mdframed]{solution}
+\declaretheoremstyle[
+  style=theorem,
+  numbered=yes,
+]{ntheorem}
 
 \declaretheoremstyle[
   spaceabove=1em,
