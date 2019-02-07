@@ -142,6 +142,13 @@
 \newenvironment{preface}{\itshape}{\par\hrulefill}
 \newcommand{\comment}[1]{\marginnote{\scriptsize\textcolor{gray}{#1}}}
 
+% mdframed setup
+\mdfdefinestyle{solution}{
+  skipabove=1em,
+}
+
+\newmdenv[style=solution]{solution}
+
 % math commands
 
 %% use cooler mathds black-board math font
