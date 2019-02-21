@@ -1,0 +1,114 @@
+\documentclass{../homework}
+
+\homework{4}
+\date{Thursday 2/21}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+	Let $f \in C[0,1]$.  Show that there exists a sequence $p_n$ of
+  polynomials that converge uniformly to $f$ on $[0,1]$ and so that
+  $\norm{p_n}_{\infty} \leq \norm{f}_{\infty}$.
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	Suppose that $f \in C[a,b]$ and $\int_a^b x^n f(x)\,dx = 0$ for
+  $n=0,1,2,\ldots$.  Does this imply that $f$ is identically
+  zero?\footnote{Hint: You may use standard facts about integration
+    from calculus.  You may also use the fact that if $g \in C[a,b]$
+    and $\int_a^b |g(x)|\,dx = 0$, then $g$ is the zero function.}
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	\footnote{Hint: If $f_n$ is a sequence of continuous functions that
+    converges uniformly to $f$ on $[a,b]$, then
+    $\int_a^b f_n(x)\,dx \to \int_a^b f(x)\,dx$.  You may use this
+    fact, along with any results from calculus that you need.}
+  Suppose that $p_n$ is a sequence of polynomials that converge
+  uniformly on $[a,b]$.  Does the sequence $p_n'$ of derivatives also
+  converges uniformly on $[a,b]$?
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	Suppose that $f:\R\to\R$ is differentiable and that $f'$ is
+  continuous on $\R$.  Fix $a<b$ and consider $C[a,b]$, equipped with
+  the sup norm.  For each $\epsilon >0$, does there exist a polynomial
+  $p$ such that $\norm{f - p}_{\infty} < \epsilon$ and
+  $\norm{f' - p'}_{\infty} < \epsilon$?\footnote{Hint: You may use
+    facts from calculus as necessary.}
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	Does there exist a sequence $p_n$ of polynomials such that
+  $\lim_{n\to\infty} p_n(x) = 0$ for all $x\in [0,1]$ but such that
+  $\lim_{n\to\infty} \int_0^1 p_n(x)\,dx = \infty$?
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	This exercise outlines another proof of the Weierstrass
+  Approximation Theorem.  Define a sequence of polynomials $p_n$
+  inductively by setting $p_0(x) = 0$ (the zero function) and
+	\begin{equation*}
+		p_{n+1}(x) = \tfrac{1}{2}[x + 2p_n(x) -  p_n^2(x)]
+	\end{equation*}
+	for $n = 1,2,\ldots$
+
+	\begin{enumerate}
+  \item Prove that $0 \leq p_n(x) \leq p_{n+1}(x) \leq \sqrt{x}$ for
+    $x \in [0,1]$.\footnote{Hint: This is an induction proof, but it
+      is harder than it looks.}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Show that the polynomials $p_n$ converges to $\sqrt{x}$
+    uniformly on $[0,1]$.\footnote{Hint: Use the Least Upper Bound
+      Principle and Dini's Theorem from HW3.}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Given $r>0$, find a sequence of polynomials $q_n$ such that
+    $q_n(x)$ converges to $|x|$ uniformly on $[-r,r]$.\footnote{Hint:
+      Use (ii).}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Use the preceding problems to prove the Weierstrass
+    Approximation Theorem.\footnote{Hint: It suffices to consider the
+      interval $[0,1]$.  Use the fact that $CPL[0,1]$ is dense in
+      $C[0,1]$ and use the explicit formula for continuous piecewise
+      linear functions derived in HW1.}
+
+    \begin{solution}
+
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+\end{document}
