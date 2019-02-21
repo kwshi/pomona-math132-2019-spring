@@ -28,9 +28,13 @@
 }
 \RequirePackage{mathtools, thmtools}
 
+%%% symbols
+\RequirePackage{stmaryrd}
+
 %% utility packages
 \RequirePackage{
   mdframed,
+  stackrel,
   cancel,
   lastpage,
   multicol,
@@ -40,7 +44,6 @@
   hyperref,
   marginnote,
   isomath,
-  nicematrix,
   centernot,
   caption,
   subcaption,
@@ -156,6 +159,7 @@
 
 %% miscellaneous operators
 \newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
+\DeclareMathOperator{\lspan}{span}
 
 %% vector bold-italic
 \renewcommand{\vec}{\mathbfit}
