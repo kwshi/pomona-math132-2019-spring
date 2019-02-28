@@ -117,7 +117,7 @@
 \declaretheorem[style=exercise]{Exercise}
 
 \declaretheoremstyle[
-  spaceabove=1em,
+  spaceabove=0em,
   numbered=no,
   bodyfont=\normalfont,
   headfont=\bfseries,
@@ -149,10 +149,19 @@
 
 % mdframed setup
 \mdfdefinestyle{solution}{
-  skipabove=1em,
+  skipabove=.5em,
 }
 
 \newmdenv[style=solution]{solution}
+
+% tikz libraries
+\usetikzlibrary{calc}
+\usetikzlibrary{math}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{intersections}
+\usetikzlibrary{arrows.meta}
 
 % math commands
 
@@ -161,7 +170,10 @@
 
 %% miscellaneous operators
 \newcommand{\defeq}{\stackrel{\mathrm{def}}{=}}
-\DeclareMathOperator{\lspan}{span}
+\newcommand{\toto}{\rightrightarrows}
+\newcommand{\uniformto}{\toto}
+\DeclareMathOperator*{\lspan}{span}
+\DeclareMathOperator*{\vecspan}{span}
 
 %% vector bold-italic
 \renewcommand{\vec}{\mathbfit}
@@ -175,6 +187,7 @@
 \newcommand{\K}{\mathbb K}
 \newcommand{\N}{\mathbb N}
 
+\newcommand{\A}{\mathcal A}
 \newcommand{\W}{\mathcal W}
 \newcommand{\V}{\mathcal V}
 
