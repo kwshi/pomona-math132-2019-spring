@@ -151,8 +151,19 @@
 \mdfdefinestyle{solution}{
   skipabove=.5em,
 }
+\mdfdefinestyle{quote}{
+  hidealllines=true,
+  leftline=true,
+  linecolor=lightgray!50,
+  linewidth=.25em,
+  innerrightmargin=0pt,
+  rightmargin=0pt,
+  skipabove=.5em,
+  skipbelow=.5em,
+}
 
 \newmdenv[style=solution]{solution}
+\renewmdenv[style=quote]{quote}
 
 % tikz libraries
 \usetikzlibrary{calc}
@@ -185,6 +196,7 @@
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\C}{\mathbb C}
 \newcommand{\K}{\mathbb K}
+\newcommand{\T}{\mathbb T}
 \newcommand{\N}{\mathbb N}
 
 \newcommand{\A}{\mathcal A}
@@ -192,7 +204,7 @@
 \newcommand{\V}{\mathcal V}
 
 % transpose and complement
-\newcommand{\T}{\mathsf{T}}
+\newcommand{\transpose}{\mathsf{T}}
 \renewcommand{\complement}{\mathsf{C}}
 
 %% differential operators
@@ -232,4 +244,4 @@
 \newcommand{\Set}{\Curly}
 \newcommand{\Setst}[2]{\Set{{#1} \; : \; {#2}}}
 
-\newcommand{\eval}[1]{\bigg\rvert}
+\newcommand{\eval}{\bigg\rvert}
