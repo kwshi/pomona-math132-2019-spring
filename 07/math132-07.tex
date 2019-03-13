@@ -1,0 +1,175 @@
+\documentclass{../homework}
+
+\homework 7
+\date{Thursday 3/14}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+	Compute $\displaystyle \int_1^2 x^{-2}\,dx$ using Riemann
+  sums.\footnote{Hint: Let $x_i = 1 + \frac{i}{n}$ for
+    $i = 0,1,2,\ldots,n$ and choose $\xi_i$ for $i = 1,2\ldots, n$ to
+    be the \emph{geometric mean} of $x_{i-1}$ and $x_i$.  In other
+    words, let $\xi_i = \sqrt{x_{i-1}x_i}$.}
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	Evaluate\footnote{Hint: Interpret the limit as as a limit of Riemann
+    sums.  Be sure to specify your partitions and samples.}
+	\begin{equation*}
+		\lim_{n\to\infty} \sum_{i=1}^n \frac{n}{n^2 + i^2}
+	\end{equation*}
+	and explain your reasoning.
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+  \footnote{\emph{Hint}: The limit can be evaluated by interpreting it
+    as a limit of Riemann sums.}  Let $f$ be a positive continuous
+  function on $[0,1]$.  Evaluate
+  \[
+		\lim_{n \to \infty} \sqrt[n]{
+      f\Paren{\tfrac{1}{n}}
+      f\Paren{\tfrac{2}{n}} \cdots
+      f\Paren{\tfrac{n}{n}}
+    }.
+  \]
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	Let $f:[a,\infty) \to \R$ be Riemann integrable on $[a,b]$ for every
+  $b > a$.  The \emph{improper integral} $\int_a^{\infty} f(x)\,dx$
+  \emph{converges to $L$} if
+	\begin{equation*}
+		\lim_{R\to\infty} \int_a^R f(x)\,dx = L.
+	\end{equation*}
+  Let $X$ be a metric space.  The \emph{positive} and \emph{negative
+    parts} of $g:X\to\R$ are
+  \begin{equation*}
+    g^+(x) = \max\{ g(x), 0\} \quad \text{and} \quad
+    g^-(x) = \max\{ -g(x), 0\},
+  \end{equation*}
+  respectively.  Then $g^+, g^- \geq 0$ and
+  \begin{equation*}
+    g = g^+ - g^- \quad \text{and} \quad
+    |g| = g^+ + g^-.
+  \end{equation*}
+	Suppose that $f$ and $g$ are functions on $[a,\infty)$ that are
+  Riemann integrable on $[a,b]$ for all $b > a$ and such that
+  $|g(x)| \leq f(x)$ for all $x \geq a$.  Prove that if
+  $\int_a^{\infty} f(x)\,dx$ converges, then
+  $\int_a^{\infty} g(x)\,dx$ converges.  This is known as the
+  \emph{Comparison Test} for improper integrals.\footnote{Hint: Use
+    the inequality $0 \leq g^+(x) \leq |g(x)| \leq f(x)$ for
+    $x \geq a$.}
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	Let $$f(x) = \displaystyle\frac{\sin x}{x}$$ for $x > 0$ and set
+  $f(0) = 1$ so that $f$ is continuous on $[0,\infty)$.  This function
+  provides a standard example of an improper integral which is
+  convergent but not absolutely convergent (i.e., conditionally
+  convergent). This can occur if the integrand oscillates above and
+  below the $x$-axis so that the signed areas of the ``positive'' and
+  ``negative humps'' cancel each other out.
+	\begin{enumerate}
+  \item Prove that the improper integral
+    $\displaystyle \int_0^{\infty} \frac{\sin x}{x}\,dx$ is
+    convergent.\footnote{Hint: Do not attempt to evaluate the integral
+      directly (it is difficult or impossible using real-variable
+      methods).  Use integration by parts and the Comparison Test
+      instead.  Using complex analysis (contour integration), one can
+      show that
+      $\int_0^{\infty} \frac{\sin x}{x}\,dx = \frac{\pi}{2}$.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove that the improper integral
+    $\displaystyle \int_0^{\infty} \left| \frac{\sin x}{x}
+    \right|\,dx$ is divergent.\footnote{Hint: Examine
+      $\int_{N\pi}^{(N+1)\pi} \frac{ |\sin x|}{x} \,dx$ for
+      $N = 1,2,\ldots$ and compare the result to the partial sums of
+      the harmonic series.  }
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+	For infinite series, we know that if $\sum_{n=0}^{\infty} a_n$
+  converges, then $a_n \to 0$.  What can be said about improper
+  integrals having \emph{continuous} integrands?  In other words, if
+  $f:[0,\infty) \to \R$ is continuous and the improper integral
+  $\int_0^{\infty} f(x) \,dx$ converges, what can one conclude about
+  $\lim_{x\to\infty} f(x)$?  Justify your answer.
+
+  \begin{solution}
+
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+	This problem provides a useful convergence criterion for improper
+  integrals.  It is well-suited for dealing with integrands that are
+  highly oscillatory.
+	\begin{enumerate}
+  \item Let $f \in C[a,\infty)$ and let $g \in C^1[a,\infty)$.  Define
+    \begin{equation*}
+      F(x) = \int_a^x f(t)\,dt
+    \end{equation*}
+    for $x \geq a$.  Suppose that (a)
+    $\int_a^{\infty} |g'(t)|\,dt < \infty$, (b) $F$ is bounded, (c)
+    $\lim_{x\to\infty} g(x) = 0$.  Prove that the improper integral
+    $\int_a^{\infty} f(x) g(x)\,dx$ is convergent.\footnote{Hint: Use
+      integration by parts and the fact that an absolutely convergent
+      improper integral (with a continuous integrand) is convergent.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Use the preceding to prove that
+    $\int_0^{\infty} \cos(x^2)\,dx$ converges.\footnote{\emph{Hint}:
+      Do not attempt to evaluate the integral directly.  Try a change
+      of variables instead.  Using complex analysis, it is possible to
+      show that the
+      $\int_0^{\infty} \cos(x^2)\,dx = \sqrt{ \frac{\pi}{8} }$.  The
+      function $C(x) = \int_0^x \cos(t^2)\,dt$ arises in optics and
+      near-field diffraction.  It is called a \emph{Fresnel
+        integral}.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+\end{document}
