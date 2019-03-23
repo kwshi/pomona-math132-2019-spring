@@ -1,0 +1,224 @@
+\documentclass{../homework}
+
+\homework 8
+\date{Thursday 3/28}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+	Let \(\M_n(\R)\) denote the set of \(n \times n\) real matrices.  In
+  this exercise we calculate the derivative of the squaring function
+  \(S \colon \M_n(\R) \to \M_n(\R)\), defined by \(S(A) = A^2\).
+	\begin{enumerate}
+  \item For each fixed \(A \in \M_n(\R)\), prove that the function
+    \(T_A \colon \M_n(\R) \to \M_n(\R)\) defined by \(T_A(H) = AH+ HA\) is
+    linear.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove that \([{\bf D}S(A)](H) = AH+HA\) for all
+    \(H \in \M_n(\R)\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item How does (ii) related to the calculus formula
+    \(\od{}{x} x^2 = 2x\)?
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+	Let \(\mathsf{GL}_n(\R)\) denote the set of invertible \(n \times n\)
+  matrices.\footnote{The notation \(\mathsf{GL}_n(\R)\) stands for the
+    \emph{general linear group of order \(n\) over the field \(\R\)}.
+    Those who have taken abstract algebra will recognize that
+    \(\mathsf{GL}_n(\R)\) is a group.}  In this exercise we compute the
+  derivative\footnote{Using the fact that the determinant
+    \(\det \colon \M_n(\R) \to \R\) is continuous and that
+    \(\mathsf{GL}_n(\R) = \det^{-1}( \R \backslash \{0\} )\) is the
+    inverse image under \(\det\) of an open set, it follows that
+    \(\mathsf{GL}_n(\R)\) is an open subset of \(\M_n(\R)\).  Thus is it
+    permissible to speak of differentiability of the inverse operation
+    on \(\mathsf{GL}_n(\R)\). } of the inverse operation
+  \(T \colon \mathsf{GL}_n(\R) \to \mathsf{GL}_n(\R)\), defined by
+  \(T(A) = A^{-1}\).
+	\begin{enumerate}
+  \item Prove that
+    \begin{equation*}
+      \norm{
+        (A+H)^{-1} - A^{-1} - (-A^{-1} HA^{-1})
+      }
+      \leq 2 \norm{A^{-1}}^3 \norm{H}^2
+    \end{equation*}
+    for sufficiently small \(H \in \M_n(\R)\).\footnote{Hint: Use
+      geometric series to expand \((A+H)^{-1}\).  Be sure to explain why
+      this is legitimate.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove that \([\vec{D}T(A)]H = -A^{-1}HA^{-1}\) for all
+    \(A \in \mathsf{GL}_n(\R)\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item How does (ii) relate to the calculus formula
+    \(\od{}{x} (x^{-1}) = -x^{-2}\) for \(x \neq 0\)?
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+	A \emph{Hilbert space} is an inner product space \(\h\) that is
+  complete with respect to the metric induced by the inner product.
+  Every Hilbert space is a Banach space, although the converse is not
+  true.  Examples of Hilbert spaces are:
+	\begin{itemize}
+  \item \(\R^n\), endowed with the usual inner product (i.e., the dot
+    product),
+  \item \(\M_n(\R)\), endowed with the inner product
+    \(\inner{A,B} = \tr{B^\transpose A}\),
+  \item The \emph{Lebesgue spaces} \(L^2[a,b]\) (from graduate
+    analysis).  \(L^2[a,b]\) consists of all Lebesgue measurable
+    functions \(f \colon [a,b]\to\C\) such that
+    \begin{equation}\label{eq-L2}
+      \norm{f}^2 = \int_a^b |f(x)|^2 \dif x
+    \end{equation}
+    is finite.  The corresponding inner product is \footnote{In fact,
+      \(L^2[a,b]\) is the completion of the space \(C_{\C}[a,b]\) of
+      continuous functions \(f\colon[a,b]\to\C\) with respect to the
+      norm \eqref{eq-L2}.}
+    \begin{equation*}
+      \inner{f,g} = \int_a^b f(x)\overline{g(x)} \dif x.
+    \end{equation*}
+	\end{itemize}
+	This exercise concerns an important property of Hilbert spaces that
+  is useful in many approximation problems.  We prove that if \(S\) is
+  a nonempty, closed, convex\footnote{Recall that \(S\) is convex if
+    \(S\) contains \(t \vec{x}_1 + (1-t) \vec{x}_2\) whenever
+    \(\vec{x}_1, \vec{x}_2 \in S\) and \(t\in [0,1]\).}  subset of a
+  Hilbert space \(\h\), then for each \(\vec{x} \in \h\), there is a
+  unique \(\vec{y} \in S\) such that
+	\begin{equation}
+    \label{eq-MinimumAttained}
+		\norm{ \vec{x} - \vec{y} }
+    = \inf_{ \vec{s} \in S } \norm{ \vec{x} - \vec{s} }.
+	\end{equation}
+	In other words, there is a unique point in \(S\) which is as close to
+  \(\vec{x}\) as possible.
+	\begin{enumerate}
+  \item The \emph{parallelogram identity} states that
+    \begin{equation}\label{eq-Parallelogram}
+      \norm{ \vec{x} + \vec{y} }^2 + \norm{ \vec{x} - \vec{y}}^2
+      = 2( \norm{ \vec{x} }^2 + \norm{ \vec{y} }^2)
+    \end{equation}
+    for all \(\vec{x}, \vec{y} \in \h\).\footnote{John von Neumann
+      proved that a Banach space whose norm satisfies
+      \eqref{eq-Parallelogram} is actually a Hilbert space.  Thus,
+      \eqref{eq-Parallelogram} actually characterizes Hilbert space
+      norms.  In particular, if you have a Banach space norm which
+      does not satisfy \eqref{eq-Parallelogram}, then that norm cannot
+      possibly arise from an inner product.}  Prove it.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Let \(S\) be a nonempty, closed, convex subset of a Hilbert
+    space \(\h\) and let \(\vec{x} \in \h\).  Let \(\vec{y}_n\) be a
+    sequence in \(S\) such that
+    \begin{equation}
+      \label{eq-ParallelogramLimit}
+      \lim_{n\to\infty} \norm{ \vec{x} - \vec{y}_n}
+      = \inf_{ \vec{s} \in S} \norm{ \vec{x} - \vec{s}} = d.
+    \end{equation}
+    Use \eqref{eq-Parallelogram} to deduce that
+    \begin{equation}
+      \label{eq-Crazy}
+      \norm{ \vec{y}_m - \vec{y}_n }^2
+      = 2(\norm{ \vec{x} - \vec{y}_m }^2
+      + \norm{ \vec{x} - \vec{y}_n}^2)
+      - 4\norm{ \vec{x} - \tfrac{1}{2}( \vec{y}_m + \vec{y}_n) }^2
+			\end{equation}
+			holds for all \(m,n \in \N\).
+
+      \begin{solution}
+        \begin{proof}
+
+        \end{proof}
+      \end{solution}
+
+		\item Use (ii) to prove that there is a unique \(\vec{y} \in S\)
+      for which \eqref{eq-MinimumAttained} holds.\footnote{Hint: Show
+        that \(\vec{y}_n\) is a Cauchy sequence.  Make sure to use the
+        fact that \(S\) is a convex set.}
+
+      \begin{solution}
+        \begin{proof}
+
+        \end{proof}
+      \end{solution}
+
+		\item Let \(f \in L^2[a,b]\).  Prove that for each \(n \in \N\),
+      there exists a unique polynomial \(p_n\) such that
+      \(\deg p_n \leq n\) and
+			\begin{equation*}
+				\int_a^b | f(x) - p_n(x)|^2 \dif x
+			\end{equation*}
+			is minimized.\footnote{Even for \(C^{\infty}\)-functions \(f\), the
+        Taylor polynomials are usually the wrong choice here.  For
+        instance, the polynomial \(p(x)\) of degree \(\leq 5\) which best
+        approximates (in the \(L^2\)-sense above) \(f(x) = \sin x\) on
+        \([-\pi,\pi]\) is
+        \begin{align*}
+          p(x)
+          &= \tfrac{105(1485-153\pi^2 + \pi^4)}{8\pi^6} x
+            - \tfrac{315(1155-125\pi^2 + \pi^4)}{4\pi^8} x^3
+            + \tfrac{693(945 - 105\pi^2 + \pi^4)}{8 \pi^{10}} x^5\\
+          &\approx 0.987862x - 0.155271 x^3 + 0.00564312 x^5.
+			\end{align*}
+			This can be found using the notion of \emph{orthogonal
+        projections} from Advanced Linear Algebra (Math 173).  It
+      turns out that Taylor polynomials only approximate well near the
+      center of the Taylor expansion.  What we are asking for here is
+      an approximation by polynomials which works well, in a sort of
+      ``average sense,'' throughout the entire interval \([a,b]\).}
+    \footnote{Hint: Use the fact that \(L^2[a,b]\) is a Hilbert space.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+\end{document}
