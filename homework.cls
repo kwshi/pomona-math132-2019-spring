@@ -185,6 +185,7 @@
 \newcommand{\uniformto}{\toto}
 \DeclareMathOperator*{\lspan}{span}
 \DeclareMathOperator*{\vecspan}{span}
+\DeclareMathOperator*{\tr}{tr}
 
 %% vector bold-italic
 \renewcommand{\vec}{\mathbfit}
@@ -199,6 +200,8 @@
 \newcommand{\T}{\mathbb T}
 \newcommand{\N}{\mathbb N}
 
+\newcommand{\M}{\mathsf M}
+\newcommand{\h}{\mathcal H}
 \newcommand{\A}{\mathcal A}
 \newcommand{\W}{\mathcal W}
 \newcommand{\V}{\mathcal V}
