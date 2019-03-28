@@ -184,6 +184,7 @@
 \newcommand{\toto}{\rightrightarrows}
 \newcommand{\uniformto}{\toto}
 \DeclareMathOperator*{\lspan}{span}
+\DeclareMathOperator*{\ran}{ran}
 \DeclareMathOperator*{\vecspan}{span}
 \DeclareMathOperator*{\tr}{tr}
 

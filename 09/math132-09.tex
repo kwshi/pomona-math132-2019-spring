@@ -1,0 +1,134 @@
+\documentclass{../homework}
+
+\homework 9
+\date{Thursday 4/4}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+	This exercise concerns various extremal problems, some of which can
+  be attacked using the Euler--Lagrange optimization method.
+	\begin{enumerate}
+  \item Assuming that a minimizing function exists, find a function
+    \(y = y(x) \in C^1[1,2]\) that minimizes the functional
+    \begin{equation*}
+      I(y) = \int_1^2 \frac{ \sqrt{1 + (y')^2}}{x}\,dx
+    \end{equation*}
+    subject to the constraints \(y(1) = 0\) and \(y(2) =1\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Find a function \(y = y(x) \in C^1[0,1]\) that minimizes the
+    functional
+    \[
+      I(y) = \int_0^1 (y')^2 \dif x
+    \]
+    subject to the constraints \(y(0) = 0\) and \(y(1) =1\).  Explain
+    why a minimum exists.\footnote{\emph{Hint}: Show that the
+      functional is convex.}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item What is the infimum of \(I(y) = \int_0^1 y^2 \dif x\), in
+    which \(y\) runs over all functions in \(C^1[0,1]\) satisfying the
+    constraints \(y(0) = 1\) and \(y(1) = 0\)?  Is this infimum
+    attained?
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Find a function \(y = y(x) \in C^1[0,1]\) that minimizes the
+    functional
+    \begin{equation*}
+      I(y) = \int_0^1 (y')^2 + 12 xy \dif x
+    \end{equation*}
+    subject to the constraints \(y(0) = 0\) and \(y(1) = 2\).  Explain
+    why an extremal function exists.\footnote{\emph{Hint}: Establish
+      that the functional is convex.}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Find the minimum value of the functional
+    \(I(y) = \int_{-1}^1 y^2 (2x - y')^2 \dif x\) on \(C^1[-1,1]\)
+    subject to the constraints \(y(-1) = 0\) and
+    \(y(1) = 1\).\footnote{\emph{Hint}: This one is kind of tricky.
+      The Euler--Lagrange equations might be too complicated to
+      handle.  Is there a simpler way?}
+
+    \begin{solution}
+
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+	Let \(m > n\) and fix \(A \in \M_{m \times n}(\R)\).  Since
+  \(m > n\), the associated linear transformation
+  \(T_A\colon\R^n \to \R^m\) is not surjective since
+  \(\dim\ran T_A \leq n < m\). Therefore there are many vectors
+  \(\vec{y} \in \R^m\) so that the system \(A \vec{x} = \vec{y}\) is
+  inconsistent.  We address the issue of how to find \(\vec{x}\) so
+  that the distance between \(A\vec{x}\) and \(\vec{y}\) is minimized.
+  These ideas are closely related to linear regression and the method
+  of least squares.
+	\begin{enumerate}
+  \item Consider the functional \(f\colon\R^n \to \R\) defined
+    by\footnote{\emph{Hint}: \(\ran T_A\) is convex and \(\R^m\) is a
+      Hilbert space.}
+    \begin{equation}\label{eq-LeastFunctional}
+      f( \vec{x} ) = \norm{ A \vec{x} - \vec{y}}^2.
+    \end{equation}
+    Prove that for each \(\vec{y} \in \R^m\), there is a
+    \(\vec{x} \in \R^n\) that minimizes \eqref{eq-LeastFunctional}.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Compute the Fr\'echet derivative of \(f\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Show that the functional \eqref{eq-LeastFunctional} is
+    minimized if \(\vec{x}\) satisfies the \emph{normal equations}
+    \(A^{\mathsf{T}} A \vec{x} = A^{\mathsf{T}} \vec{y}\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+	\item Consider the inconsistent linear system
+    \(A \vec{x} = \vec{y}\), where
+		\begin{equation*}
+			A =
+			\begin{bmatrix}
+				1 & 0 & -1 \\ 2 & 1 & -2 \\ 1 & 1 & 0 \\ 1 & 1 & -1
+			\end{bmatrix}, \qquad \vec{y} =
+      \begin{bmatrix}
+        6 \\ 0 \\ 9 \\ 3
+      \end{bmatrix}.
+		\end{equation*}
+		Find the unique vector \(\vec{x}\) in \(\R^3\) which minimizes the
+    quantity \(\norm{ A \vec{x} - \vec{y} }\).
+
+    \begin{solution}
+
+    \end{solution}
+	\end{enumerate}
+\end{Exercise}
+\end{document}
