@@ -30,6 +30,7 @@
 
 %%% symbols
 \RequirePackage{stmaryrd}
+\RequirePackage{wasysym}
 
 %% utility packages
 \RequirePackage{
@@ -99,6 +100,32 @@
 
 %% list styles
 \setlist[enumerate, 1]{label=(\roman*)}
+
+\newcommand*{\iffenum}[1]{\expandafter\@iffenum\csname c@#1\endcsname}
+\newcommand*{\@iffenum}[1]
+{\ifcase#1\or{\(\Rightarrow\)}\or{\(\Leftarrow\)}\else\@ctrerr\fi}
+
+\newcommand*{\subsetenum}[1]{\expandafter\@subsetenum\csname c@#1\endcsname}
+\newcommand*{\@subsetenum}[1]
+{\ifcase#1\or{\(\subset\)}\or{\(\supset\)}\else\@ctrerr\fi}
+
+\newcommand*{\leenum}[1]{\expandafter\@leenum\csname c@#1\endcsname}
+\newcommand*{\@leenum}[1]
+{\ifcase#1\or{\(\le\)}\or{\(\ge\)}\else\@ctrerr\fi}
+
+\AddEnumerateCounter{\iffenum}{\@iffenum}{\(\implies\)}
+\AddEnumerateCounter{\subsetenum}{\@subsetenum}{\(\subset\)}
+\AddEnumerateCounter{\leenum}{\@leenum}{\(\le\)}
+
+\newlist{iffproof}{enumerate}{1}
+\setlist[iffproof]{label=(\iffenum*)}
+
+\newlist{seteqproof}{enumerate}{1}
+\setlist[seteqproof]{label=(\subsetenum*)}
+
+\newlist{eqproof}{enumerate}{1}
+\setlist[eqproof]{label=(\leenum*)}
+
 
 %% hyperlink styles
 \hypersetup{
@@ -185,6 +212,7 @@
 \newcommand{\uniformto}{\toto}
 \DeclareMathOperator*{\lspan}{span}
 \DeclareMathOperator*{\ran}{ran}
+\DeclareMathOperator*{\col}{col}
 \DeclareMathOperator*{\vecspan}{span}
 \DeclareMathOperator*{\tr}{tr}
 
