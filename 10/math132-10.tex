@@ -1,0 +1,158 @@
+\documentclass{../homework}
+
+\homework{10}
+\due{in the Math 132 mailbox before 2pm on Friday 4/12}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+  This exercise outlines a proof of a fundamental result in the theory
+  of Fourier series.  Specifically, we wish to prove that if
+  \(f \colon \T \to \C\) is Riemann integrable and
+  \(\widehat{f}(n) = 0\) for all \(n \in \Z\), then \(f(x) = 0\)
+  whenever \(f\) is continuous at \(x\).
+  \begin{enumerate}
+  \item Suppose toward a contradiction that \(\hat f (n) = 0\) for all
+    \(n \in \Z\), yet \(f(x_0) \neq 0\) at some point \(x_0\) at which
+    \(f\) is continuous.  Prove that it suffices to consider the case
+    \(x_0 = 0\).\footnote{\emph{Hint}: Consider the function
+      \(g(x) = f(x+x_0)\).}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove that it suffices to consider the case where
+    \(f \colon \T \to \R\) and \(f(0) > 0\).\footnote{\emph{Hint}:
+      First prove that
+      \(\hat f (n) = 0 \;\; \forall n \in \Z \iff \hat{\bar f}(n) = 0
+      \;\; \forall n \in \Z\).}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Under the assumptions above, prove that
+    \[
+      \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) q(x) \dif x = 0
+    \]
+    for any trigonometric polynomial
+    \(q(x) = \sum_{n = -N}^M a_n e^{inx}\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Since \(f\) is continuous at \(0\) and \(f(0) > 0\), there
+    exists \(0 < \delta \leq \frac{\pi}{2}\) such that
+    \(f(x) > \frac{f(0)}{2}\) whenever \(\abs x < \delta\).  Define
+    the trigonometric polynomial \(p(x) = \epsilon + \cos x\), in
+    which \(\epsilon > 0\) is so small that
+    \begin{equation*}
+      \abs{p(x)} < 1 - \frac{\epsilon}{2}
+    \end{equation*}
+    whenever \(\delta \leq \abs x \leq \pi\).  Choose a positive
+    \(\eta < \delta\) so that
+    \begin{equation*}
+      1 + \frac{ \epsilon}{2} \leq \abs{p(x)}
+    \end{equation*}
+    for \(\abs x < \eta\).  Finally, let \(p_n(x) = [p(x)]^n\) for
+    \(n \in \N\).  Carefully illustrate the construction of \(p(x)\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Since each \(p_n\) is a trigonometric polynomial, it follows
+    from (iii) that\footnote{The technique used in (iv) and (v) is a
+      standard one -- construct a sequence of functions which ``peak''
+      at just the right place and which ``die off'' elsewhere.}
+    \begin{equation*}
+      \int_{-\pi}^{\pi} f(x) p_n(x)\dif x = 0
+    \end{equation*}
+    for \(n \in \N\).  Estimate the integrals \(I_1,I_2,I_3\) in the
+    decomposition
+    \begin{equation}
+      \label{eq-TripleSum}
+      \underbrace{\int_{0 \le \abs x < \eta}
+        f(x) p_n(x) \dif x}_{I_1}
+      + \underbrace{\int_{\eta \le \abs x < \delta}
+        f(x) p_n(x) \dif x}_{I_2}
+      + \underbrace{\int_{\delta \le \abs x \le \pi}
+        f(x) p_n(x) \dif x}_{I_3} = 0
+    \end{equation}
+    and arrive at a contradiction.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+  For \(N \in \N\), the \emph{Dirichlet kernel} is the trigonometric
+  polynomial
+  \(D_N(x) = \sum_{n=-N}^N e^{inx} = 1 + 2 \sum_{n=1}^N \cos nx\).
+  \begin{enumerate}
+  \item Prove that\footnote{\emph{Hint}: Use the formula for the sum
+      of a finite geometric series and use the formula
+      \(\sin x = \frac{1}{2i} (e^{ix} - e^{-ix})\).}
+    \begin{equation}
+      \label{eq-Dirichlet}
+      D_N(x)
+      = \frac{\sin\Bracket{\Paren{N + \frac 1 2} x}}{\sin \frac x 2}.
+    \end{equation}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove that
+    \(\displaystyle \frac{1}{2\pi} \int_{-\pi}^{\pi} D_N(x) \dif x =
+    1\) for all \(N \in \N\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item The \emph{Lebesgue constants} \(L_N\) are defined by
+    \begin{equation*}
+      L_N
+      = \frac{1}{2\pi} \int_{-\pi}^{\pi} \Abs{D_N(x)} \dif x
+      = \frac{1}{2\pi} \int_{-\pi}^{\pi}
+      \Abs{\frac{\sin\Bracket{\Paren{N + \frac 1 2}x}}
+        {\sin \frac x 2}} \dif x.
+    \end{equation*}
+    Prove that \(L_N \geq c \log N\) for some constant
+    \(c > 0\).\footnote{\emph{Hint}: Use symmetry and the substitution
+      \(u = \frac x 2\), then use the inequality \(\sin u \leq u\) for
+      \(u \in \Bracket{0,\frac \pi 2}\).  You will also need to
+      ``break up'' the resulting integral and then use the Integral
+      Test from Calculus II to estimate the partial sums of the
+      harmonic series.}  This implies that the Dirichlet kernel is not
+    a summability kernel.\footnote{The fact that \(L_N \to \infty\)
+      can be used to prove that there exist continuous functions whose
+      Fourier series diverge at certain points.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+\end{Exercise}
+\end{document}
