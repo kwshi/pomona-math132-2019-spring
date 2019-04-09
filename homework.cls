@@ -71,7 +71,7 @@
 \newcommand{\thecoauthor}{}
 \newcommand{\coauthor}[1]{\renewcommand{\thecoauthor}{#1}}
 \newcommand{\homework}[1]{\newcommand{\thehomework}{#1}}
-\newcommand{\thedue}{the beginning of class on \underline{\thedate}}
+\newcommand{\thedue}{at the beginning of class on \underline{\thedate}}
 \newcommand{\due}[1]{\renewcommand{\thedue}{#1}}
 
 %% page decoration
@@ -80,7 +80,7 @@
   \chead{
     \textbf{Homework \thehomework}\\
     {\small\textsc{\thecourse{} -- \theterm}}\\
-    {\small\textsc{due at \thedue}}
+    {\small\textsc{due \thedue}}
   }
   \rhead{\mbox{\small\theauthor}\\\mbox{\small\thecoauthor}\\}
   \lhead{{\small\textsc{\thepage\ of \pageref{LastPage}}}\\\mbox{}\\}
