@@ -48,8 +48,8 @@
   centernot,
   caption,
   subcaption,
-  enumitem
 }
+\usepackage[inline]{enumitem}
 
 % document setup
 %% page dimensions
