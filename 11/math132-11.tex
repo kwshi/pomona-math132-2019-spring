@@ -1,0 +1,121 @@
+\documentclass{../homework}
+
+\homework{11}
+\date{Thursday 4/18}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+  Let \(\xi\) be an irrational number.  Prove that if \(f:\R \to \C\)
+  is continuous and periodic with period \(1\), then\footnote{This
+    result is an important stepping stone to Weyl's Equidistribution
+    Theorem from number theory.  One way of thinking of
+    \eqref{eq-WeylIntegral} is that irrational rotations ``mix'' the
+    circle \(\T\) so thoroughly that ``time averages'' equal ``space
+    averages'' for continuous \(f\).}  \footnote{\emph{Hint}: First
+    prove the result for complex exponentials
+    \(f(x) = e^{2\pi i k x}\) for \(k \in \Z\).  By linearity,
+    conclude that \eqref{eq-WeylIntegral} holds for all trigonometric
+    polynomials (with \(e^{2\pi i kx}\) in place of \(e^{ikx}\) for
+    scaling reasons).}
+  \begin{equation}
+    \label{eq-WeylIntegral}
+    \lim_{N \to \infty} \frac{1}{N}
+    \sum_{n=1}^N f(n \xi) = \int_0^1 f(x) \dif x.
+  \end{equation}
+
+  \begin{solution}
+    \begin{proof}
+
+    \end{proof}
+  \end{solution}
+\end{Exercise}
+
+\begin{Exercise}
+  This exercise concerns some results concerning the relationship
+  between the smoothness of a function and the rate of decay of its
+  Fourier coefficients.
+  \begin{enumerate}
+  \item Prove that if \(f \in C^1(\T)\), then
+    \(\widehat{f'}(n) = in \hat f(n)\) for all
+    \(n \in \Z\).\footnote{\emph{Hint}: Integrate the definition of
+      \(\hat{f}(n)\) by parts.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove that if \(f \in C^r(\T)\), then
+    \(\hat f(n) = o\Paren{\frac{1}{\abs n^r}}\) as
+    \(n \to \pm \infty\).\footnote{\(F(n) = o(G(n))\) means that
+      \(\lim_{n\to\infty} \frac{F(n)}{G(n)} = 0\).  That is, \(F\)
+      goes to zero faster than \(G\) does.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove that if \(f \in C^2(\T)\), then the Fourier series for
+    \(f\) converges absolutely and uniformly to \(f\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+\end{Exercise}
+
+
+\begin{Exercise}
+  Let \(f(x) = x^2\) for \(\abs x \leq \pi\) and extend \(f\) by
+  \(2\pi\)-periodicity to all of \(\R\).
+  \begin{enumerate}
+  \item Compute the real Fourier series of this function.
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Prove that the Fourier series for \(f\) converges uniformly to
+    \(f\).\footnote{Note that \(f \notin C^2(\T)\) since there are
+      ``cusps'' at \(x = \pm \pi\).}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Use (i) and (ii) to prove that\footnote{The sum of this famous
+      series was first computed by Euler.}
+    \(\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^2} =
+    \frac{\pi^2}{6}\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Use Parseval's Formula and (i) to prove that\footnote{Euler
+      computed \(\sum_{n=1}^{\infty} \frac{1}{n^{2k}}\) for
+      \(k = 1,2,3,\ldots\).  An explicit formula for
+      \(\sum_{n=1}^{\infty} \frac{1}{n^3}\) is still unknown!}
+    \(\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^4} =
+    \frac{\pi^4}{90}\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+\end{Exercise}
+\end{document}
