@@ -215,6 +215,12 @@
 \DeclareMathOperator*{\col}{col}
 \DeclareMathOperator*{\vecspan}{span}
 \DeclareMathOperator*{\tr}{tr}
+\DeclareMathOperator{\sgn}{sgn}
+
+\let\Re\relax
+\let\Im\relax
+\DeclareMathOperator{\Re}{Re}
+\DeclareMathOperator{\Im}{Im}
 
 %% vector bold-italic
 \renewcommand{\vec}{\mathbfit}
