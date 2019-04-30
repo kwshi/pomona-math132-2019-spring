@@ -1,0 +1,155 @@
+\documentclass{../homework}
+
+\homework{13}
+\date{Thursday 5/2}
+
+\author{}
+\coauthor{}
+
+\begin{document}
+\begin{Exercise}
+  Let \(f(x) = \cos zx\) for \(x \in [-\pi,\pi]\) and suppose that
+  \(z \notin \Z\).
+  \begin{enumerate}
+  \item Compute the real Fourier series of \(f\).
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Prove that the Fourier series for \(f\) converges uniformly to
+    \(f\).
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Use (i) and (ii) to prove
+    \begin{equation}\label{eq-Cot}
+      \pi \cot \pi z
+      = \frac{1}{z} + 2z \sum_{n=1}^{\infty} \frac{1}{z^2 - n^2}
+    \end{equation}
+    for \(z \notin \Z\).  The formula \eqref{eq-Cot} is known as the
+    \emph{partial fractions} expansion of
+    \(\pi \cot \pi z\).\footnote{Infinite partial fraction expansions
+      are something discussed in graduate-level complex analysis.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Use (iii) to prove the formula
+    \begin{equation}\label{eq-Sine}
+      \frac{\sin \pi z}{\pi z}
+      = \prod_{n=1}^{\infty} \Paren{1 - \frac{z^2}{n^2}}
+    \end{equation}
+    for \(z \notin \Z\).\footnote{\emph{Hint}: For each \(n \in \N\),
+      the series \eqref{eq-Cot} converges uniformly
+      \(r \leq \abs z < R\) if \(r,R\) are chosen correctly.  On such
+      a region (a closed annulus in the complex plane) the series can
+      then be integrated term-by-term.} \footnote{Infinite product
+      factorizations of functions are explored further in
+      graduate-level complex analysis.}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove \emph{Wallis' Formula}\footnote{Hint: Use (iv).}
+    \begin{equation*}
+      \frac{\pi}{2} = \frac{2}{1} \cdot \frac{2}{3}
+      \cdot \frac{4}{3} \cdot \frac{4}{5}
+      \cdot \frac{6}{5} \cdot \frac{6}{7} \cdot \cdots.
+    \end{equation*}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+\end{Exercise}
+
+\begin{Exercise}
+  For \(0 \leq r < 1\), the \emph{Poisson kernel} is the function
+  \(P_r(t) = \sum_{n \in \Z} r^{\abs n } e^{int}\).  In other words,
+  \(P_r(t) = 1 + 2 \sum_{n=1}^{\infty} r^n \cos n t\) for
+  \(n \in \Z\).
+  \begin{enumerate}
+  \item Prove that\footnote{Hint: Use the formula for the sum of a
+      finite geometric series and use Euler's Formula to show that
+      \(\cos x = \frac{1}{2} (e^{ix} + e^{-ix})\).}
+    \begin{equation*}
+      P_r(t) = \frac{1 - r^2}{1 - 2r \cos t + r^2}.
+    \end{equation*}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Graph \(P_r(t)\) for \(t \in [-\pi,\pi]\) and several values
+    of \(r\).  Describe the behavior of \(P_r(t)\) as
+    \(r \to 1^-\).\footnote{You may wish to use a computer for this
+      problem.}
+
+    \begin{solution}
+
+    \end{solution}
+
+  \item Prove that \(P_r(t)\) is a (continuous) summability
+    kernel.\footnote{By a ``continuous'' summability kernel, we mean
+      that \(P_r(t)\) satisfies the definition of a summability kernel
+      except that this family is indexed by the continuous parameter
+      \(r \in [0,1)\), rather than by a discrete parameter
+      \(n \in \N\).}
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+
+  \item Prove that if \(f\colon \T\to\C\) is Riemann integrable then
+    \begin{equation*}
+      \lim_{r\to 1^-} \frac{1}{2\pi} \int_{-\pi}^{\pi}
+      \frac{1 - r^2}{1 - 2r \cos (\theta - t) + r^2} f(e^{it}) \dif t
+      = f(e^{i \theta})
+    \end{equation*}
+    for all \(\theta\) at which \(f\) is continuous.  Prove that if
+    \(f \in C(\T)\), then the convergence is uniform.
+
+    \begin{solution}
+      \begin{proof}
+
+      \end{proof}
+    \end{solution}
+  \end{enumerate}
+
+  Using basic complex analysis or tedious multivariable calculus, it
+  is possible to prove that \emph{Poisson's Formula}
+  \begin{equation}\label{eq-Extension}
+    f(re^{i\theta}) = \frac{1}{2\pi} \int_{-\pi}^{\pi}
+    \frac{1 - r^2}{1 - 2r \cos(\theta - t) + r^2} f(e^{it}) \dif tt,
+    \quad r \in [0,1)
+  \end{equation}
+  yields an extension of a function \(f\colon \T\to\R\) (originally
+  defined on the unit circle) to a function defined on the unit disk
+  and satisfying the boundary value problem
+  \begin{equation*}
+    \pd[2] u x + \pd[2] u y
+    \qquad u(e^{i\theta}) = f(e^{i\theta}).
+  \end{equation*}
+  In physical terms, \eqref{eq-Extension} solves the
+  \emph{steady-state heat equation} \(\pd[2] u x + \pd[2] u y = 0\) on
+  \(\mathbb{D}\) subject to the temperature function \(f\) applied to
+  the boundary \(\T\)
+\end{Exercise}
+\end{document}
